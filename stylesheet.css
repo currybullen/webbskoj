@@ -1,0 +1,177 @@
+body {
+  /*Use the helvetica font or sans-serif if not available.*/
+  font-family: helvetica, sans-serif;
+
+  /*Use white text on a dark grey background.*/
+  color: #F8F8F2;
+  background: #171714;
+
+  /*We generally do not want to be using a marigin.*/
+  margin: 0px;
+
+  /*Add padding at the top and bottom so that the header and footer won't cover elements.*/
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  /*Force the scrollbar to always be visible.*/
+  overflow-y: scroll;
+}
+
+header nav ul {
+  /*The header uses a lighter grey bacgkround.*/
+  background: #272822;
+
+  /*Fixes the position of the navbar at the top.*/
+  position: fixed;
+  top: 0;
+
+  /*Sets the width to full page width.*/
+  width: 100%;
+
+  /*Increase the thickness of the header a bit.*/
+  padding: 20px 0px 20px 0px;
+
+  /*We want the menu items to be centered.*/
+  text-align: center;
+
+  /*Removes the whitespace between the navbar and the top of the page.*/
+  margin: 0px;
+
+  /*Add a shadow effect to te header.*/
+  box-shadow: 0 0 40px #000;
+}
+
+header nav ul li {
+  /*We want the list items to be displayed vertically.*/
+  display: inline;
+
+  /*Increase the space between the menu items a bit.*/
+  padding: 20px;
+}
+
+header nav a {
+  /*We want the menu items to use a white color.*/
+  color: #F8F8F2;
+
+  /*Increase their font size a bit.*/
+  font-size: 20px;
+
+  /*Remove the standard underlined style.*/
+  text-decoration: none;
+}
+
+header nav a:hover {
+  /*Add the undeline style when the being hovered.*/
+  text-decoration: underline;
+}
+
+h1 {
+  /*Align the header to the center of the screen.*/
+  text-align: center;
+}
+
+#page_width {
+  /*We'll be using a page width of 800 pixels.*/
+  width: 800px;
+
+  /*And we want the content to be centered.*/
+  margin: 0 auto;
+}
+
+
+#add_article_show:hover {
+  /*Underline the add article button when hovering the mouse over it.*/
+  text-decoration: underline;
+
+  /*Also we want the mouse pointer to turn into something appropriate.*/
+  cursor: pointer;
+}
+
+#add_article_show + article {
+  /*Add some space between the add article button and the first article.*/
+  margin-top: 10px;
+}
+
+#add_article_show + #add_article_form {
+  /*Add some space between the add article button and the add article field.*/
+  margin-top: 20px;
+}
+
+/*These settings are essentially the same as for an ordinary article, with the added last attribute which hides it by default.*/
+#add_article_form {
+  padding: 20px;
+  box-shadow: 0 0 40px #000;
+  color: #F8F8F2;
+  background: #272822;
+  display: none;
+}
+
+/*Styling options for the field where the article title is entered.*/
+#add_article_title {
+  display: inline;
+  background-color : #171714;
+  color: #F8F8F2;
+}
+
+#add_article_title + #add_article_text {
+  /*Spacing between the title and text field.*/
+  margin-top: 20px;
+}
+
+/*Styling options for the field where the article text is entered.*/
+#add_article_text {
+  /*We only want the text field to be resizable vertically.*/
+  resize: vertical;
+
+  background-color : #171714;
+  color: #F8F8F2;
+}
+
+#add_article_text + #publish_button {
+  /*Add some space between the text field and the publishing button.*/
+  margin-top: 10px;
+}
+
+/*Styling options for the publish button.*/
+#publish_button {
+  background-color : #171714;
+  color: #F8F8F2;
+}
+
+#add_article_text {
+  /*We reduce the width of the add article text field slightly.*/
+  width: 99%;
+}
+
+#add_article_form + #articles {
+  /*Add some spacing between the add article form and the other articles.*/
+  margin-top: 20px;
+}
+
+article {
+  /*Give the article content some padding.*/
+  padding: 20px;
+
+  /*Give the article a shadow.*/
+  box-shadow: 0 0 40px #000;
+
+  /*The article background is a lighter grey.*/
+  background: #272822;
+}
+
+article + article {
+  /*Set some spacing between the articles.*/
+  margin-top: 20px;
+}
+
+/*Basically the same as the header.*/
+footer {
+  background: #272822;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+
+  box-shadow: 0 0 40px #000;
+}

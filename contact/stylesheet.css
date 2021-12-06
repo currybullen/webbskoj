@@ -1,0 +1,47 @@
+/*This is basically the same as for the articles on the main page.*/
+#contact_info_box {
+  padding: 20px;
+  box-shadow: 0 0 40px #000;
+  color: #F8F8F2;
+  background: #272822;
+}
+
+#contact_info_box img {
+  display: block;
+  margin: 0 auto;
+
+  /*We want a circular cutout of the actual image.*/
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+#profile_pic + #contact_info_table {
+  /*Spacing between the image and the contact information.*/
+  padding-top: 20px;
+}
+
+#contact_info_table {
+  /*Center the contact information table.*/
+  margin: 0 auto;
+}
+
+#contact_info_table a {
+  /*Change the color of the contact information links.*/
+  color: #F8F8F2;
+}
+
+#contact_info_table a:hover {
+  /*Remove the underline style when mouse hovering the contact information links.*/
+  text-decoration: none;
+}
+
+#contact_info_table td {
+  /*Add some padding in the contact information table.*/
+  padding: 0 20px 0 20px;
+}
+
+.contact_info_class {
+  /*Align all of the first column items in the contact info table to the right.*/
+  text-align: right;
+}

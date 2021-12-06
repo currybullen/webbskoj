@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <!--Head containing all relevant metadata and so on.-->
+  <head>
+    <meta charset=utf-8>
+    <title>Blogg</title>
+
+    <!--We'll be using one sole stylesheet.-->
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <meta name="description" content="En blogg utvecklad under ett projektarbete i kursen Webbutveckling I vid Mittuniversitet.">
+  </head>
+
+  <body>
+    <!--Header, containing the navigation items and the blog title picture.-->
+    <header>
+      <nav>
+        <!---->
+        <h1><img src="img.jpg" alt="Blogg"></h1>
+        <ul>
+          <li><a href="index.html">Startsida</a></li>
+          <li><a href="contact/index.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Div used to set the page width and center it.-->
+    <div id="page_width">
+
+      <!--The button used to add an article.-->
+      <a id="add_article_show" onclick="showAddArticle()">Lägg till artikel</a>
+
+      <!--The form used when adding an article.-->
+      <form id="add_article_form">
+        Titel:
+        <input type="text" id="add_article_title" value="Artikelns titel...">
+        <textarea id="add_article_text" rows=5>Artikelns text...</textarea>
+        <input type="button" onclick="addArticle()" value="Publicera" id="publish_button">
+      </form>
+
+      <!--Div used to identify the actual article section.-->
+      <div id="articles">
+
+        <!--All articles follow the same pattern...-->
+        <article>
+
+          <!--They start out with a header containing the title, and the date published.-->
+          <header>
+            <h2>Lorum Ipsum 3</h2>
+            <p>Publicerad: <time>2015-07-29 21:45</time></p>
+          </header>
+
+          <!--Finally the article text.-->
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel quam elit. Quisque rutrum nibh non nisi accumsan, sed commodo nunc egestas. Phasellus a nunc nunc. Etiam eget felis maximus, aliquam ipsum a, auctor felis. Sed bibendum viverra sem, id sagittis est feugiat ut. Curabitur interdum purus ac massa fringilla, id aliquam leo suscipit. Aliquam erat volutpat.
+
+          Proin elementum turpis vel tincidunt placerat. Cras tincidunt id diam iaculis mollis. Suspendisse aliquet consectetur libero, sit amet condimentum quam volutpat a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus elit in sapien cursus, sit amet finibus ipsum convallis. Maecenas condimentum sagittis massa, sit amet aliquam sem fringilla vel. Cras ut vestibulum ex. Ut et ex malesuada, congue nulla vel, condimentum quam. Sed turpis turpis, tempor a finibus sollicitudin, vehicula vel magna. Morbi sagittis porta blandit. Nunc volutpat neque eget justo dapibus, a suscipit enim pharetra. Phasellus commodo bibendum interdum. Quisque sodales risus eget vulputate placerat. Morbi commodo sapien nunc, sit amet malesuada nunc tristique in.</p>
+        </article>
+
+        <!--All articles follow the same pattern, and these three were automatically generated, they all contain gibberish.-->
+        <article>
+          <header>
+            <h2>Lorum Ipsum 2</h2>
+            <p>Publicerad: <time>2015-07-26 17:35</time></p>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel quam elit. Quisque rutrum nibh non nisi accumsan, sed commodo nunc egestas. Phasellus a nunc nunc. Etiam eget felis maximus, aliquam ipsum a, auctor felis. Sed bibendum viverra sem, id sagittis est feugiat ut. Curabitur interdum purus ac massa fringilla, id aliquam leo suscipit. Aliquam erat volutpat.
+
+          Proin elementum turpis vel tincidunt placerat. Cras tincidunt id diam iaculis mollis. Suspendisse aliquet consectetur libero, sit amet condimentum quam volutpat a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus elit in sapien cursus, sit amet finibus ipsum convallis. Maecenas condimentum sagittis massa, sit amet aliquam sem fringilla vel. Cras ut vestibulum ex. Ut et ex malesuada, congue nulla vel, condimentum quam. Sed turpis turpis, tempor a finibus sollicitudin, vehicula vel magna. Morbi sagittis porta blandit. Nunc volutpat neque eget justo dapibus, a suscipit enim pharetra. Phasellus commodo bibendum interdum. Quisque sodales risus eget vulputate placerat. Morbi commodo sapien nunc, sit amet malesuada nunc tristique in.</p>
+        </article>
+
+        <article>
+          <header>
+            <h2>Lorum Ipsum 1</h2>
+            <p>Publicerad: <time>2015-07-23 13:47</time></p>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel quam elit. Quisque rutrum nibh non nisi accumsan, sed commodo nunc egestas. Phasellus a nunc nunc. Etiam eget felis maximus, aliquam ipsum a, auctor felis. Sed bibendum viverra sem, id sagittis est feugiat ut. Curabitur interdum purus ac massa fringilla, id aliquam leo suscipit. Aliquam erat volutpat.
+
+          Proin elementum turpis vel tincidunt placerat. Cras tincidunt id diam iaculis mollis. Suspendisse aliquet consectetur libero, sit amet condimentum quam volutpat a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus elit in sapien cursus, sit amet finibus ipsum convallis. Maecenas condimentum sagittis massa, sit amet aliquam sem fringilla vel. Cras ut vestibulum ex. Ut et ex malesuada, congue nulla vel, condimentum quam. Sed turpis turpis, tempor a finibus sollicitudin, vehicula vel magna. Morbi sagittis porta blandit. Nunc volutpat neque eget justo dapibus, a suscipit enim pharetra. Phasellus commodo bibendum interdum. Quisque sodales risus eget vulputate placerat. Morbi commodo sapien nunc, sit amet malesuada nunc tristique in.</p>
+        </article>
+      </div>
+    </div>
+
+    <!--A very light footer.-->
+    <footer>
+      Copyright 2015 Mikael Karlsson
+    </footer>
+
+    <script>
+      /*This function shows the add article field once the user has clicked the "Lägg till artikel"-button.*/
+      function showAddArticle() {
+              var e = document.getElementById("add_article_form");
+
+              /*If the add article field is already shown, hide it.*/
+              if (e.style.display == "block")
+                e.style.display = "none";
+
+              /*If not, show it.*/
+              else
+                e.style.display = "block";
+            }
+
+      /*This function adds an article, its executed when the user has clicked the publish button.*/
+      function addArticle() {
+              /*The article title and text are fetched.*/
+              var title = document.getElementById("add_article_title").value;
+              var text = document.getElementById("add_article_text").value;
+
+              /*A new article is created.*/
+                var article = document.createElement("article");
+
+              /*We create a new header.*/
+                var header = document.createElement("header");
+
+              /*That contains a heading.*/
+                var header_title = document.createElement("h2");
+
+              /*We add the heading to the containers/wrappers.*/
+                header_title.appendChild(document.createTextNode(title));
+              header.appendChild(header_title);
+
+              /*We add a date and time stamp to the header as well.*/
+                var header_date = document.createElement("p");
+              var header_timestamp = document.createElement("time");
+              header_timestamp.appendChild(document.createTextNode("Publicerad: " + getTimestamp()));
+              header_date.appendChild(header_timestamp);
+              header.appendChild(header_date);
+
+              /*Adding the header to the article.*/
+                article.appendChild(header);
+
+              /*Adding the article text to the article.*/
+                var paragraph = document.createElement("p");
+              paragraph.appendChild(document.createTextNode(text));
+              article.appendChild(paragraph);
+
+              /*Adding the article to DOM and hiding the add article field.*/
+                var e = document.getElementById("articles");
+              e.insertBefore(article, e.firstChild);
+              showAddArticle();
+            }
+
+      /*Internal function to get the current date and time as a string.*/
+        function getTimestamp() {
+                var d = new Date();
+                var dd = d.getDate();
+                var mm = d.getMonth()+1;
+                var yyyy = d.getFullYear();
+                var time = d.getHours() + ":" + d.getMinutes();
+
+                if (dd < 10) {
+                        dd = "0"+ dd;
+                      }
+
+                if (mm < 10) {
+                        mm = "0" + mm;
+                      }
+                return yyyy + "-" + mm + "-" + dd + " " + time;
+              }
+    </script>
+  </body>
+</html>
